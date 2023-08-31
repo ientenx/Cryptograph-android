@@ -19,9 +19,10 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 
 @Composable
-fun AuthUi(viewModel: AuthViewModel, onAuthenticationSucceed: () -> Unit) {
+fun AuthUi(viewModel: AuthViewModel = viewModel(), onAuthenticationSucceed: () -> Unit) {
 
     val authUiEffect by viewModel.uiEffect.collectAsState(initial = null)
 

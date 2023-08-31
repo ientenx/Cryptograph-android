@@ -66,6 +66,9 @@ dependencies {
     implementation(libs.ui.tooling.preview)
     implementation(libs.material3)
 
+    // lifecycle viewmodel compose
+    implementation(libs.lifecycle.viewmodel.compose)
+
     // dagger hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)

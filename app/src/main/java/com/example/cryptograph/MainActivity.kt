@@ -20,6 +20,7 @@ import com.example.cryptograph.auth.AuthViewModel
 import com.example.cryptograph.model.StudentModel
 import com.example.cryptograph.network.StudentService
 import com.example.cryptograph.session.UserSessionManager
+import com.example.cryptograph.students.StudentsUi
 import com.example.cryptograph.ui.theme.CryptographTheme
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
@@ -35,8 +36,6 @@ class MainActivity : ComponentActivity() {
 
     @Inject
     lateinit var studentService: StudentService
-
-    private val viewModel: AuthViewModel by viewModels()
 
     private var isAuthenticated by mutableStateOf<Boolean?>(null)
 
@@ -59,30 +58,9 @@ class MainActivity : ComponentActivity() {
                 ) {
                     if (isAuthenticated == false)
                         AuthUi(
-                            viewModel = viewModel,
                             onAuthenticationSucceed = { isAuthenticated = true })
                     if (isAuthenticated==true) {
-                        var students by remember { mutableStateOf<String?>("Loading...") }
-
-                        LaunchedEffect(null) {
-                            delay(2222)
-
-                            studentService.postStudent(
-                                StudentModel(
-                                    name = "mohammad",
-                                    lastName = "jahangiry"
-                                )
-                            )
-
-                            val response = studentService.getAllStudents()
-                            val body = response.body()
-                            students = if (response.isSuccessful && body != null)
-                                body.toString()
-                            else
-                                response.errorBody()?.string()
-                        }
-
-                        Text(text = students.toString())
+                        StudentsUi()
                     }
                 }
             }
