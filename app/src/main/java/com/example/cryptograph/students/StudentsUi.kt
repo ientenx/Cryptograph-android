@@ -1,6 +1,7 @@
 package com.example.cryptograph.students
 
 import android.widget.Toast
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -112,7 +113,7 @@ fun StudentsUi(viewModel: StudentsViewModel = viewModel()) {
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
 private fun StudentsList(
     modifier: Modifier = Modifier,
@@ -174,12 +175,15 @@ private fun StudentsList(
             item {
                 Spacer(modifier = Modifier.height(8.dp))
             }
-            items(students) { student ->
+            items(students, key = { it.id ?: it.name }) { student ->
                 Student(modifier = Modifier
+                    .animateItemPlacement()
                     .clickable {
                         onStudentClick(student)
                     }
-                    .padding(horizontal = 8.dp), student = student, onDeleteClick = onDeleteStudent)
+                    .padding(horizontal = 8.dp),
+                    student = student,
+                    onDeleteClick = onDeleteStudent)
             }
             item {
                 Spacer(modifier = Modifier.height(64.dp))

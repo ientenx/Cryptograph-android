@@ -5,6 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.cryptograph.model.StudentModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.BufferOverflow
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asSharedFlow
@@ -33,6 +34,7 @@ class StudentsViewModel @Inject constructor(private val repository: StudentsRepo
 
     private fun loadAllStudents() {
         viewModelScope.launch {
+            delay(2000)
             val response = repository.getAllStudents()
 
             val body = response.body()
