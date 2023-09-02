@@ -59,7 +59,7 @@ android {
 
 dependencies {
 
-    implementation(project(":anti"))
+    implementation(project(":rasp"))
     implementation(project(":network"))
 
     implementation(libs.core.ktx)

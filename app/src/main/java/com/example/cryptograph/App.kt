@@ -1,6 +1,6 @@
 package com.example.cryptograph
 
-import com.tg.android.anti.NativeLib.*
+import com.example.rasp.NativeLib.*
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
@@ -15,13 +15,11 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         xcrash.XCrash.init(this)
-        AntiFrida()
-        AntiXposed()
-        AntiRoot()
-        AntiDebug()
-        AntiMemDump()
-        AntiEmulator()
-        AntiDualApp()
+        Frida()
+        Xposed()
+        MemDump()
+        Emulator()
+        DualApp()
     }
     override fun onTerminate() {
         super.onTerminate()
