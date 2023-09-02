@@ -18,6 +18,7 @@ hilt = "2.47"
 retrofit = "2.9.0"
 okHttp = "4.11.0"
 jjwt = "0.11.5"
+xcrash-android = "3.0.0"
 
 [libraries]
 kotlin-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinCoroutinesAndroid"}
@@ -49,6 +50,7 @@ okHttp-loggingInterceptor = { group = "com.squareup.okhttp3", name = "logging-in
 jjwt-api = { group = "io.jsonwebtoken", name = "jjwt-api", version.ref = "jjwt" }
 jjwt-impl = { group = "io.jsonwebtoken", name = "jjwt-impl", version.ref = "jjwt" }
 jjwt-jackson = { group = "io.jsonwebtoken", name = "jjwt-jackson", version.ref = "jjwt" }
+xcrash-android = { group = "com.iqiyi.xcrash", name = "xcrash-android-lib", version.ref = "xcrash-android" }
 
 [plugins]
 com-android-application = { id = "com.android.application", version.ref = "agp" }

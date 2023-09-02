@@ -22,6 +22,10 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+        ndk {
+            abiFilters.addAll(arrayOf("arm64-v8a", "armeabi-v7a", "x86", "x86_64"))
+        }
     }
 
     buildTypes {
@@ -55,6 +59,7 @@ android {
 
 dependencies {
 
+    implementation(project(":anti"))
     implementation(project(":network"))
 
     implementation(libs.core.ktx)
@@ -65,6 +70,9 @@ dependencies {
     implementation(libs.ui.graphics)
     implementation(libs.ui.tooling.preview)
     implementation(libs.material3)
+
+    // xrash for frida
+    implementation(libs.xcrash.android)
 
     // lifecycle viewmodel compose
     implementation(libs.lifecycle.viewmodel.compose)
