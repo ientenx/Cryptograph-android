@@ -1,18 +1,18 @@
 #include <fcntl.h>
 
 #include "check_dual_app.h"
-#include "../JNIHelper/JNIHelper.hpp"
+#include "../jni/JNIHelper.hpp"
 #include "../io/_mini_io.h"
 #include "Utils.h"
-#include "../JNIHelper/app/ActivityThread.h"
+#include "../jni/app/ActivityThread.h"
 
-std::string AntiDualApp::check() {
+std::string DualAppSecurity::check() {
 
     return check_dual_app();
 }
 
 
-std::string AntiDualApp::check_dual_app() {
+std::string DualAppSecurity::check_dual_app() {
     jh::JNIEnvironmentGuarantee jniEnvironmentGuarantee;
 
     std::string self_fd = "/proc/self/fd";

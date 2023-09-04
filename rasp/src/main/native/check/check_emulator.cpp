@@ -7,7 +7,7 @@
 #include "../utils/Utils.h"
 
 
-std::string AntiEmulator::check() {
+std::string EmulatorSecurity::check() {
     std::string result = "Emulator Secure";
     std::vector<std::string> list_of_files =
             {
@@ -43,7 +43,7 @@ std::string AntiEmulator::check() {
     return result;
 }
 
-bool AntiEmulator::check_of_file(std::string file_name) {
+bool EmulatorSecurity::check_of_file(std::string file_name) {
     int fd = _open(file_name.c_str(), O_RDONLY);
     if (fd == errno || fd == -1) {
         return false;
@@ -51,7 +51,7 @@ bool AntiEmulator::check_of_file(std::string file_name) {
     return true;
 }
 
-bool AntiEmulator::dir(std::string dir_name) {
+bool EmulatorSecurity::dir(std::string dir_name) {
     int fd = _open(dir_name.c_str(), O_DIRECTORY);
     if (fd == errno || fd == -1) {
         return false;
@@ -59,7 +59,7 @@ bool AntiEmulator::dir(std::string dir_name) {
     return true;
 }
 
-std::string AntiEmulator::check_of_prop(std::string cmd) {
+std::string EmulatorSecurity::check_of_prop(std::string cmd) {
     char value[256];
     std::string result;
     __system_property_get(cmd.c_str(), value);

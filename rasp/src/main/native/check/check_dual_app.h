@@ -4,7 +4,7 @@
 #include <string>
 #include <jni.h>
 
-class AntiDualApp {
+class DualAppSecurity {
 public:
     std::string check();
 

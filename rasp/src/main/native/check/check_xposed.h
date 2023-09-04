@@ -16,7 +16,7 @@ enum {
     CAN_NOT_ANTI_XPOSED,
 };
 
-class AntiXposed {
+class XposedSecurity {
 public:
     int get_xposed_status(JNIEnv *env, int sdk);
 

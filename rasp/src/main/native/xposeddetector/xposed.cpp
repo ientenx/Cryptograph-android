@@ -4,7 +4,7 @@
 #include "hash.h"
 #include "../check/check_xposed.h"
 #include "Utils.h"
-#include "../JNIHelper/JNIHelper.hpp"
+#include "../jni/JNIHelper.hpp"
 
 jclass xposed::findLoadedClass(C_JNIEnv *env, jobject classLoader, const char *name) {
     jh::JNIEnvironmentGuarantee jniEnvironmentGuarantee;

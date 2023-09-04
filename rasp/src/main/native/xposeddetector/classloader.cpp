@@ -1,5 +1,5 @@
 #include "classloader.h"
-#include "../JNIHelper/JNIHelper.hpp"
+#include "../jni/JNIHelper.hpp"
 #include "art.h"
 #include "plt.h"
 #include "xposed.h"

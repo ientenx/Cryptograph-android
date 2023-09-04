@@ -8,7 +8,7 @@
 #include "../io/_mini_io.h"
 
 
-void AntiFrida::check() {
+void FridaSecure::check() {
     char *libc_path = nullptr;
     int page_size = getpagesize();
     uint64_t start = frida_find_library_base("libc", &libc_path);
@@ -37,7 +37,7 @@ bool str_has_prefix(const char *str1, const char *str2) {
     return x == str1;
 }
 
-uint64_t AntiFrida::frida_find_library_base(std::string library_name, char **library_path) {
+uint64_t FridaSecure::frida_find_library_base(std::string library_name, char **library_path) {
     uint64_t result = 0;
     std::string maps_path = "/proc/self/maps";
     const std::size_t line_size = 1024 + PATH_MAX;
@@ -106,7 +106,7 @@ uint64_t AntiFrida::frida_find_library_base(std::string library_name, char **lib
     return result;
 }
 
-uint64_t AntiFrida::frida_find_library_space_base(uint64_t base, uint32_t page_size) {
+uint64_t FridaSecure::frida_find_library_space_base(uint64_t base, uint32_t page_size) {
     std::string map_path = "/proc/self/maps";
     const std::size_t line_size = 1024 + 1024;
     char *line;

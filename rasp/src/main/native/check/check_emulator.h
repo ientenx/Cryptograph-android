@@ -3,7 +3,7 @@
 
 #include <string>
 
-class AntiEmulator {
+class EmulatorSecurity {
 public:
     std::string check();
 

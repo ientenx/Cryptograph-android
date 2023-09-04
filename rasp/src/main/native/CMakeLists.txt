@@ -5,7 +5,7 @@ project("rasp")
 add_subdirectory(io)
 
 include_directories(io
-        JNIHelper
+        jni
         check
         utils)
 
@@ -26,11 +26,11 @@ add_library(
         check/check_mem_dump.cpp
         check/check_mem_dump.h
 
-        JNIHelper/utils/JavaObjectPointer.cpp
-        JNIHelper/utils/JStringUtils.cpp
-        JNIHelper/native/JavaNativeMethod.cpp
-        JNIHelper/core/JNIEnvironment.cpp
-        JNIHelper/core/JavaCustomClass.cpp
+        jni/utils/JavaObjectPointer.cpp
+        jni/utils/JStringUtils.cpp
+        jni/native/JavaNativeMethod.cpp
+        jni/core/JNIEnvironment.cpp
+        jni/core/JavaCustomClass.cpp
 
         utils/Utils.cpp
 

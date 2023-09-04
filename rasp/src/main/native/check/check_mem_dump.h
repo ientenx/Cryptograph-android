@@ -5,7 +5,7 @@
 
 unsigned static int gpCrash = 0xfa91b9cb;
 
-class AntiMemDump {
+class MemoryDumpSecurity {
 public:
     static void detect_memory_dump_loop(void *args);
 

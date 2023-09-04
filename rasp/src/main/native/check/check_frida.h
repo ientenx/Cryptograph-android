@@ -3,7 +3,7 @@
 
 #include <string>
 
-class AntiFrida {
+class FridaSecure {
 public:
     void check();
 

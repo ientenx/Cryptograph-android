@@ -1,5 +1,5 @@
 #include "check_mem_dump.h"
-#include "../JNIHelper/JNIHelper.hpp"
+#include "../jni/JNIHelper.hpp"
 #include "sys/inotify.h"
 #include <time.h>
 #include <dirent.h>
@@ -23,7 +23,7 @@ static const std::string PROC_TASK_MEM = "/proc/self/task/%s/mem";
 static const std::string PROC_TASK_PAGEMAP = "/proc/self/task/%s/pagemap";
 
 
-void AntiMemDump::detect_memory_dump_loop(void* args) {
+void MemoryDumpSecurity::detect_memory_dump_loop(void* args) {
     struct timespec timereq;
     timereq.tv_sec = 1;
     timereq.tv_nsec = 0;
@@ -38,7 +38,7 @@ void AntiMemDump::detect_memory_dump_loop(void* args) {
 
 __attribute__((always_inline))
 inline
-void AntiMemDump::detect_fileaccess_for_debugger_memorydump() {
+void MemoryDumpSecurity::detect_fileaccess_for_debugger_memorydump() {
     int length, i = 0;
     int fd;
     int wd[MAX_WATCHERS] = {0,};
@@ -103,7 +103,7 @@ void AntiMemDump::detect_fileaccess_for_debugger_memorydump() {
 
 __attribute__((always_inline))
 inline
-int AntiMemDump::crash(int randomval) {
+int MemoryDumpSecurity::crash(int randomval) {
     volatile unsigned int *p = &gpCrash;
     p += randomval;
     p += *p + randomval;
