@@ -6,10 +6,11 @@ plugins {
 
 android {
     namespace = "com.example.network"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 21
+        targetSdk = 34
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -34,7 +35,6 @@ android {
 }
 
 dependencies {
-    
     // kotlin coroutines android
     implementation(libs.kotlin.coroutines.android)
 
@@ -44,8 +44,4 @@ dependencies {
     // retrofit
     api(libs.retrofit)
     api(libs.retrofit.converter.gson)
-
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.espresso.core)
 }

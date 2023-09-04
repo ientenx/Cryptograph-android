@@ -1,5 +1,5 @@
-#ifndef ANTI_ANDROID_ANTI_FRIDA_H
-#define ANTI_ANDROID_ANTI_FRIDA_H
+#ifndef RASP_ANTI_FRIDA_H
+#define RASP_ANTI_FRIDA_H
 
 #include <string>
 

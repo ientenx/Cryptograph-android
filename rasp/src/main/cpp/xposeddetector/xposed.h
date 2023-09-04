@@ -1,5 +1,5 @@
-#ifndef ANTI_ANDROID_XPOSED_H
-#define ANTI_ANDROID_XPOSED_H
+#ifndef RASP_XPOSED_H
+#define RASP_XPOSED_H
 
 #include <jni.h>
 #include "check_xposed.h"
@@ -32,4 +32,4 @@ private:
 };
 
 
-#endif //ANTI_ANDROID_XPOSED_H
+#endif

@@ -1,5 +1,5 @@
-#ifndef ANTI_ANDROID_CLASSLOADER_H
-#define ANTI_ANDROID_CLASSLOADER_H
+#ifndef RASP_CLASSLOADER_H
+#define RASP_CLASSLOADER_H
 
 #include "jni.h"
 
@@ -14,4 +14,4 @@ private:
 };
 
 
-#endif //ANTI_ANDROID_CLASSLOADER_H
+#endif

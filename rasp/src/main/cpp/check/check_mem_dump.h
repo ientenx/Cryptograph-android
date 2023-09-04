@@ -1,5 +1,5 @@
-#ifndef ANTI_ANDROID_ANTI_MEM_DUMP_H
-#define ANTI_ANDROID_ANTI_MEM_DUMP_H
+#ifndef RASP_ANTI_MEM_DUMP_H
+#define RASP_ANTI_MEM_DUMP_H
 
 #include <string>
 

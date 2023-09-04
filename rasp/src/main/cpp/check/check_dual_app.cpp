@@ -19,7 +19,7 @@ std::string AntiDualApp::check_dual_app() {
     std::string simple_name = "amir_molavi";
     std::string data_dir_path = jh::jstringToStdString(Application().getDataDir());
     if (data_dir_path.empty()) {
-        return "security";
+        return "DualApp Secure";
     }
     std::string separator = "/";
 
@@ -31,7 +31,7 @@ std::string AntiDualApp::check_dual_app() {
 
     if (-1 == fd) {
         LOGE("-1 == fd");
-        return "security";
+        return "DualApp Secure";
     } else {
         char fd_path[80] = {0};
         sprintf(fd_path, "%s%d", (self_fd + separator).c_str(), fd);
@@ -68,5 +68,5 @@ std::string AntiDualApp::check_dual_app() {
         }
     }
 
-    return "security";
+    return "DualApp Secure";
 }

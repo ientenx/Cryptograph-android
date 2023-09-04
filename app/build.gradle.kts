@@ -2,8 +2,7 @@
 plugins {
     alias(libs.plugins.com.android.application)
     alias(libs.plugins.org.jetbrains.kotlin.android)
-    //alias(libs.plugins.dagger.hilt.android)
-   id("dagger.hilt.android.plugin")
+    id("dagger.hilt.android.plugin")
     kotlin("kapt")
 }
 
@@ -48,7 +47,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.2"
+        kotlinCompilerExtensionVersion = "1.5.3"
     }
     packaging {
         resources {
@@ -71,7 +70,7 @@ dependencies {
     implementation(libs.ui.tooling.preview)
     implementation(libs.material3)
 
-    // xrash for frida
+    // xrash
     implementation(libs.xcrash.android)
 
     // lifecycle viewmodel compose

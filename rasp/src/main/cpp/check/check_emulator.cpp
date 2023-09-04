@@ -8,7 +8,7 @@
 
 
 std::string AntiEmulator::check() {
-    std::string result = "security";
+    std::string result = "Emulator Secure";
     std::vector<std::string> list_of_files =
             {
                     "/boot/bstmods/vboxguest.ko",

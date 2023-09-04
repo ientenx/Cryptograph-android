@@ -1,5 +1,5 @@
-#ifndef ANTI_ANDROID_ANTI_DUAL_APP_H
-#define ANTI_ANDROID_ANTI_DUAL_APP_H
+#ifndef RASP_ANTI_DUAL_APP_H
+#define RASP_ANTI_DUAL_APP_H
 
 #include <string>
 #include <jni.h>

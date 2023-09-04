@@ -1,5 +1,5 @@
-#ifndef ANTI_ANDROID_JAVAMETHOD_H
-#define ANTI_ANDROID_JAVAMETHOD_H
+#ifndef RASP_JAVAMETHOD_H
+#define RASP_JAVAMETHOD_H
 namespace jh {
     template<class ReturnType, class ... ArgumentTypes>
     jmethodID findMethod(std::string className, std::string methodName) {

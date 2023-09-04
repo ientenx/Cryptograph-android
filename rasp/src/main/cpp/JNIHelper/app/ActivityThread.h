@@ -12,8 +12,8 @@ JAVA_CLASS(JavaContext,
 JAVA_CLASS(JavaApplicationInfo,
            "android/content/pm/ApplicationInfo")
 
-#ifndef ANTI_ANDROID_ACTIVITYTHREAD_H
-#define ANTI_ANDROID_ACTIVITYTHREAD_H
+#ifndef RASP_ACTIVITYTHREAD_H
+#define RASP_ACTIVITYTHREAD_H
 
 class Application : public jh::JavaObjectWrapper<JavaApplication, Application> {
 public:

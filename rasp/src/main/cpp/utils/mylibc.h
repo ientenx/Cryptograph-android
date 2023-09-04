@@ -156,4 +156,4 @@ my_strtok_r(char *s, const char *delim, char **last) {
 }
 
 
-#endif //DETECTDEBUGGER_MYLIBC_H
+#endif

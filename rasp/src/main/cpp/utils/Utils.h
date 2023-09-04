@@ -1,5 +1,5 @@
-#ifndef ANTI_ANDROID_UTILS_H
-#define ANTI_ANDROID_UTILS_H
+#ifndef RASP_UTILS_H
+#define RASP_UTILS_H
 
 #include <android/log.h>
 

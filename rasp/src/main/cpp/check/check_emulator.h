@@ -1,5 +1,5 @@
-#ifndef ANTI_ANDROID_ANTI_EMULATOR_H
-#define ANTI_ANDROID_ANTI_EMULATOR_H
+#ifndef RASP_ANTI_EMULATOR_H
+#define RASP_ANTI_EMULATOR_H
 
 #include <string>
 

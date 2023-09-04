@@ -1,5 +1,5 @@
-#ifndef ANTI_ANDROID_FIND_NAME_H
-#define ANTI_ANDROID_FIND_NAME_H
+#ifndef RASP_FIND_NAME_H
+#define RASP_FIND_NAME_H
 
 
 #include <jni.h>

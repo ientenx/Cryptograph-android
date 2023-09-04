@@ -1,8 +1,8 @@
 #include "jni.h"
 #include "string.h"
 
-#ifndef ANTI_ANDROID_FIELDCALLER_H
-#define ANTI_ANDROID_FIELDCALLER_H
+#ifndef RASP_FIELDCALLER_H
+#define RASP_FIELDCALLER_H
 namespace jh {
     /**
        * Class that can call methods which return java objects.

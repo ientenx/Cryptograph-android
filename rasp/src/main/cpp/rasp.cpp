@@ -10,7 +10,6 @@
 #include "check/check_mem_dump.h"
 #include "check/check_emulator.h"
 
-
 #define JNI_CLASS_NAME "com/example/rasp/NativeLib"
 
 static jstring anti_frida(JNIEnv *env, jclass clazz) {
@@ -18,14 +17,14 @@ static jstring anti_frida(JNIEnv *env, jclass clazz) {
     AntiFrida antiFrida;
     antiFrida.check();
 
-    return jh::createJString("anti frida...");
+    return jh::createJString("Frida Secure");
 }
 
 static jstring anti_L_xposed(JNIEnv *env, jclass clazz) {
     jh::JNIEnvironmentGuarantee jniEnvironmentGuarantee;
     AntiXposed antiXposed;
     if (antiXposed.get_xposed_status(env, android_get_device_api_level()) == NO_XPOSED) {
-        return jh::createJString("security");
+        return jh::createJString("XPOSED Secure");
     } else if (xposed_status == FOUND_XPOSED) {
         return jh::createJString("FOUND_XPOSED");
     } else if (xposed_status == ANTIED_XPOSED) {
@@ -41,7 +40,7 @@ static jstring anti_mem_dump(JNIEnv *env, jclass clazz) {
     std::thread t(AntiMemDump::detect_memory_dump_loop, nullptr);
     t.detach();
 
-    return jh::createJString("anti MemDump...");
+    return jh::createJString("Memory Dump Secure");
 }
 
 static jstring anti_emulator(JNIEnv *env, jclass clazz) {

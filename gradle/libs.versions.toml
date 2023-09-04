@@ -54,7 +54,7 @@ xcrash-android = { group = "com.iqiyi.xcrash", name = "xcrash-android-lib", vers
 
 [plugins]
 com-android-application = { id = "com.android.application", version.ref = "agp" }
-org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "org-jetbrains-kotlin-android" }
+org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version = "1.9.10" }
 com-android-library = { id = "com.android.library", version.ref = "agp" }
 org-jetbrains-kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version = "1.9.0" }
 dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
