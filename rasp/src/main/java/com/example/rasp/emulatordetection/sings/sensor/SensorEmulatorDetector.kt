@@ -1,9 +1,9 @@
-package com.example.rasp.emulatordetection.internal.sensor
+package com.example.rasp.emulatordetection.sings.sensor
 
 import android.content.Context
 import com.example.rasp.emulatordetection.DeviceState
 import com.example.rasp.emulatordetection.EmulatorDetector
-import com.example.rasp.emulatordetection.VerdictSource
+import com.example.rasp.emulatordetection.Source
 
 internal class SensorEmulatorDetector(
     context: Context,
@@ -20,7 +20,7 @@ internal class SensorEmulatorDetector(
             .getOrThrow()
 
         return if (sensorDataProcessor.isEmulator(sensorEvents)) {
-            DeviceState.Emulator(VerdictSource.Sensors(sensorEvents))
+            DeviceState.Emulator(Source.Sensors(sensorEvents))
         } else {
             DeviceState.NotEmulator
         }

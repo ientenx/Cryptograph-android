@@ -1,4 +1,4 @@
-package com.example.rasp.emulatordetection.internal.sensor
+package com.example.rasp.emulatordetection.sings.sensor
 
 internal class SensorDataValidator {
 

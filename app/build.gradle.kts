@@ -70,9 +70,6 @@ dependencies {
     implementation(libs.ui.tooling.preview)
     implementation(libs.material3)
 
-    // xrash
-    implementation(libs.xcrash.android)
-
     // lifecycle viewmodel compose
     implementation(libs.lifecycle.viewmodel.compose)
 

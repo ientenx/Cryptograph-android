@@ -1,12 +1,12 @@
 package com.example.rasp.emulatordetection
 
-sealed class VerdictSource {
+sealed class Source {
 
     class Properties(
         val suspectDeviceProperties: List<Pair<String, String>>
-    ) : VerdictSource()
+    ) : Source()
 
     class Sensors(
         val suspectSensorValues: List<FloatArray>
-    ) : VerdictSource()
+    ) : Source()
 }

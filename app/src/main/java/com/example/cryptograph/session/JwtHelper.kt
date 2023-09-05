@@ -41,7 +41,7 @@ class JwtHelper @Inject constructor() {
 
     companion object {
         const val BODY_KEY_SET: String = "keySet"
-        const val SYMMETRIC_SECRET_KEY = "asymmetric"
+        const val SYMMETRIC_SECRET_KEY = "symmetric"
         const val ECIES_PUBLIC_KEY = "publicKey"
         const val ECIES_PRIVATE_KEY = "privateKey"
     }

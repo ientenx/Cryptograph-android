@@ -2,8 +2,8 @@ package com.example.rasp.emulatordetection
 
 import android.content.Context
 import android.hardware.Sensor
-import com.example.rasp.emulatordetection.internal.property.PropertiesEmulatorDetector
-import com.example.rasp.emulatordetection.internal.sensor.SensorEmulatorDetector
+import com.example.rasp.emulatordetection.sings.property.PropertiesEmulatorDetector
+import com.example.rasp.emulatordetection.sings.sensor.SensorEmulatorDetector
 
 abstract class EmulatorDetector {
 

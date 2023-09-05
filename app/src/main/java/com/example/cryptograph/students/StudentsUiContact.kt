@@ -9,6 +9,6 @@ sealed interface StudentsUiState {
 }
 
 sealed interface StudentsUiEffect {
-    class StudentSaved: StudentsUiEffect
-    class StudentDeleted: StudentsUiEffect
+    data object StudentSaved : StudentsUiEffect
+    data object StudentDeleted : StudentsUiEffect
 }

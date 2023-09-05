@@ -59,7 +59,7 @@ class StudentsViewModel @Inject constructor(private val repository: StudentsRepo
                     repository.updateStudent(student)
 
             if (response.isSuccessful) {
-                _uiEffect.emit(StudentsUiEffect.StudentSaved())
+                _uiEffect.emit(StudentsUiEffect.StudentSaved)
                 loadAllStudents()
             } else {
                 response.errorBody()?.string()?.let(::println)
@@ -72,7 +72,7 @@ class StudentsViewModel @Inject constructor(private val repository: StudentsRepo
             val response = repository.deleteStudent(student)
 
             if (response.isSuccessful) {
-                _uiEffect.emit(StudentsUiEffect.StudentDeleted())
+                _uiEffect.emit(StudentsUiEffect.StudentDeleted)
                 loadAllStudents()
             } else {
                 response.errorBody()?.string()?.let(::println)

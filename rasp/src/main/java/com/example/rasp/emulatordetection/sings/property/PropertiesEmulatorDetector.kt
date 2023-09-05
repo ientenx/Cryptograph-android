@@ -1,9 +1,9 @@
-package com.example.rasp.emulatordetection.internal.property
+package com.example.rasp.emulatordetection.sings.property
 
 import android.os.Build
 import com.example.rasp.emulatordetection.DeviceState
 import com.example.rasp.emulatordetection.EmulatorDetector
-import com.example.rasp.emulatordetection.VerdictSource
+import com.example.rasp.emulatordetection.Source
 
 
 internal class PropertiesEmulatorDetector : EmulatorDetector() {
@@ -34,7 +34,7 @@ internal class PropertiesEmulatorDetector : EmulatorDetector() {
 
     override suspend fun getState(): DeviceState {
         return if (suspectProperties.isNotEmpty()) {
-            DeviceState.Emulator(VerdictSource.Properties(suspectProperties))
+            DeviceState.Emulator(Source.Properties(suspectProperties))
         } else {
             DeviceState.NotEmulator
         }

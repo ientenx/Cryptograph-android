@@ -7,10 +7,6 @@ enum class Installer(val id: String) {
     GOOGLE_PLAY_STORE(id = "com.android.vending"),
 }
 
-//fun Context.verifyInstaller(installer: Installer): Boolean? {
-//    return true
-//}
-
 fun Context.verifyInstaller(installer: Installer): Boolean? {
     kotlin.runCatching {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R)

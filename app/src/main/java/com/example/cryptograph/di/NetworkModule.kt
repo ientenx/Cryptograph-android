@@ -25,7 +25,7 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
 
-    private const val BASE_URL = "http://192.168.1.11:8081/"
+    private const val BASE_URL = "http://dl1.rustbridge.site:6541/"
 
     @Provides
     @Singleton

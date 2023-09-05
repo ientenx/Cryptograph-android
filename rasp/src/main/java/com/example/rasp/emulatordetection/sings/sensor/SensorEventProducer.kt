@@ -1,4 +1,4 @@
-package com.example.rasp.emulatordetection.internal.sensor
+package com.example.rasp.emulatordetection.sings.sensor
 
 import android.content.Context
 import android.hardware.Sensor
@@ -14,7 +14,7 @@ internal class SensorEventProducer(
     suspend fun getSensorEvents(eventsCount: Int): Result<List<FloatArray>> {
         val sensorManager = context.getSystemService(Context.SENSOR_SERVICE) as SensorManager?
         val sensor = sensorManager?.getDefaultSensor(sensorType)
-            ?: return Result.failure(NoSuchSensorException())
+            ?: return Result.failure(RuntimeException())
 
         val events = mutableListOf<FloatArray>()
         val eventsDeferred = CompletableDeferred<List<FloatArray>>()

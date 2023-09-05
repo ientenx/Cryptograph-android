@@ -76,11 +76,11 @@ JNICALL JNI_OnLoad(JavaVM *vm, void *reserved) {
 
     JNINativeMethod m[] =
             {
-                    {"Frida",    "()Ljava/lang/String;", (void *) frida_guard},
-                    {"Xposed",   "()Ljava/lang/String;", (void *) xposed_gaurd},
-                    {"MemDump",  "()Ljava/lang/String;", (void *) memory_dump_guard},
-                    {"Emulator", "()Ljava/lang/String;", (void *) emulator_guard},
-                    {"DualApp",  "()Ljava/lang/String;", (void *) dual_app_guard},
+                    {"FridaGuard",    "()Ljava/lang/String;", (void *) frida_guard},
+                    {"XposedGuard",   "()Ljava/lang/String;", (void *) xposed_gaurd},
+                    {"MemDumpGuard",  "()Ljava/lang/String;", (void *) memory_dump_guard},
+                    {"EmulatorGuard", "()Ljava/lang/String;", (void *) emulator_guard},
+                    {"DualAppGuard",  "()Ljava/lang/String;", (void *) dual_app_guard},
             };
 
     if (__predict_false(0 != env->RegisterNatives(cls, m, sizeof(m) / sizeof(m[0]))))

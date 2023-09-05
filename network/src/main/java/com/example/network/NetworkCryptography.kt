@@ -23,10 +23,6 @@ class NetworkCryptography constructor(
     coroutineScope: CoroutineScope,
     keySet: StateFlow<KeySet?>
 ) {
-
-//    private fun loadKeysetJson(path: String, keysetName: String) = CleartextKeysetHandle
-//        .read(JsonKeysetReader.withInputStream(context.assets.open("$path${File.separator}$keysetName.json")))
-
     private val eciesKeySet = keySet.map {
         if (it is KeySet.ECIESKeySet)
             it
@@ -100,9 +96,6 @@ class NetworkCryptography constructor(
     private val AES256SIV =
         aes256SIVKeyset.map { if (it != null) AEAD(keysetHandle = it) else null }
             .stateIn(coroutineScope, SharingStarted.Lazily, null)
-
-    // private val clientECIES by lazy { if(clientKeyset != null) HybridEncryptor(publicKeysetHandle = clientKeyset!!) else null}
-    //private val serverECIES by lazy { if(serverKeyset != null && clientKeyset!=null) Hybrid(privateKeysetHandle = serverKeyset!!, publicKeysetHandle = clientKeyset!!) else null}
 
     private val ECIES: StateFlow<Hybrid?> =
         serverKeyset.combine(clientKeyset) { public: KeysetHandle?, private: KeysetHandle? ->

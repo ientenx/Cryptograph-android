@@ -79,10 +79,6 @@ class Util {
             }
         }
 
-        fun makeDirectory(dirName: String) {
-            val path = Paths.get(dirName)
-            if (Files.notExists(path)) Files.createDirectory(path)
-        }
     }
 
 }
